@@ -347,9 +347,9 @@
 		_setStyle : function() {
 
 			// max-width is the real size of the images
-			this.$el.css( {
-				'max-width' : this.realWidth
-			} );
+			// this.$el.css( {
+			// 	'max-width' : this.realWidth
+			// } );
 
 		},
 		_initEvents : function() {
