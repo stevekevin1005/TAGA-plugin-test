@@ -215,7 +215,7 @@
       }];
 
       for(var i in data){
-        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址: "+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽資訊:<br />"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
+        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
         $('#sb-slider').append(html);
         if(i == 0){
           $('#nav-dots').append("<span class='nav-dot-current'></span>");
