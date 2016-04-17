@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
-    <script src="https://cdn.jsdelivr.net/sweetalert2/1.2.0/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/1.2.0/sweetalert2.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <style type="text/css"> 
@@ -103,20 +101,6 @@
     <div class="container">
       <div class="wrapper">
         <ul id="sb-slider" class="sb-slider">
-<!--           <li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
-          </li> -->
         </ul>
 
         <div id="shadow" class="shadow"></div>
@@ -130,7 +114,7 @@
         </div>
       </div><!-- /wrapper -->
       <div class="wrapper">
-        <a id="moreShow" href="#" style="margin-top:20px;float:right">更多</a>
+        <a id="moreShow" href="http://demo.attentionhook.com/code" style="margin-top:20px;float:right">更多</a>
       </div>
     </div>
 
@@ -159,11 +143,9 @@
         "imgUrl": "http://artsdealer.net/artpp/images/topic/243/topic_list_14606563371508.jpg",
         "content": "Young Art Taipei 2016 臺北國際當代藝術博覽會\r\n地 點: 臺北喜來登飯店 展間932\r\n藏家特別預展: 4月22日（五）下午三點至八點\r\n展 期: 4月23日（六）至4月24日（日）十二點至八點\r\n參 展 藝術家: 吳曉申、阿緹蓉、曾美禎、李祐承、周柏翰、陳芷若、蔡玉庭、韓毓琦"
       }];
-      var swalHtml = '';
       for(var i in data){
         var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
        
-        swalHtml += "<div class='row'><div class='col-md-4' style='background-size: contain;height: 600px;background-repeat:no-repeat;background-image:url("+data[i].imgUrl+")'>&nbsp</div><div class='col-md-8 swalImfomation'><p>展覽名: "+data[i].titleCH+"("+data[i].titleEN+")</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.replace(/\r\n/g,"<br />")+"</p></div></div>";
 
         $('#sb-slider').append(html);
         if(i == 0){
@@ -244,14 +226,7 @@
         })();
 
         Page.init();
-        $('#moreShow').on('click',function(e){
-          e.preventDefault();
-          swal({
-            width: 1000,
-            title: '展覽一覽',
-            html: swalHtml
-          });
-        });
+        
       });
     </script>
   </body>
