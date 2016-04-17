@@ -1,230 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
-		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
-	</head>
-	<style type="text/css"> 
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+    <script src="https://cdn.jsdelivr.net/sweetalert2/1.2.0/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/1.2.0/sweetalert2.min.css">
+  </head>
+  <style type="text/css"> 
     .img{ 
-    	float:left;
-    	width: 60%;
-    	height: 720px;
+      float:left;
+      width: 60%;
+      height: 720px;
     }
     .imfomation{
-    	float:left;
-    	margin-left: 10%;
-    	width: 30%;
-    	background:rgba(0,0,0,0.5);
-    	height: 720px;
+      padding: 15px;
+      float:left;
+      margin-left: 5%;
+      width:35%;
+      background:rgba(0,0,0,0.5);
+      height: 720px;
     }
     .imfomation >p{
-    	color: #fff;
-    	font-size: 18px;
-	    font-weight: bold;
-	    font-style: normal;
-	    line-height: 1.5em;
-	    margin-top: 10px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 1.5em;
+      margin-top: 10px;
     }
     .shadow{
-    	float:left;
-    	width: 50%;
+      float:left;
+      width: 60%;
     }
     .title{
-    	color: #fff;
-	    font-size: 24px;
-	    font-weight: bold;
-	    font-style: normal;
-	    line-height: 1.5em;
-	    text-align: center;
-	    margin-top: 25px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 1.5em;
+      text-align: center;
+      margin-top: 25px;
+    }
+    #moreShow{
+      color: #919291;
+      border-color: #919291;
+      letter-spacing: 0px;
+      position: relative;
+      padding: 0.3em 1em;
+      border: 2px solid;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.7em !important;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s;
+      text-align: right;
+      font-family: "ETmodules" !important;
+      font-weight: normal;
+      font-style: normal;
+      font-variant: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1;
+      text-transform: none;
+      speak: none;
+    }
+    #moreShow:after {
+      position: absolute;
+      margin-left: -1em;
+      opacity: 0;
+      font-size: 32px;
+      line-height: 1em;
+      /*content: 35";*/
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    #moreShow:hover {
+      background: #e9e9e9;
     }
   </style>
-	<body>
-		<div class="container">
-			<div class="wrapper">
-				<ul id="sb-slider" class="sb-slider">
-					<li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li><li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li><li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li><li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-							<div class="imfomation">
-								<h4 class="title">test</h4>
-								<p>展覽名: 測試</p>
-								<p>展覽名: test</p>
-								<p>日期: 1月1日 - 12月31日</p>
-								<p>展覽地點: 台北市大安區南京東區34號</p>
-								<p>展覽地址: 台北市大安區南京東區34號</p>
-								<p>畫廊名稱: 安安你好</p>
-							</div>
-						</div>
-					</li>
-				</ul>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <ul id="sb-slider" class="sb-slider">
+<!--           <li>
+            <div>
+              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
+              <div class="imfomation">
+                <h4 class="title">test</h4>
+                <p>展覽名: 測試</p>
+                <p>展覽名: test</p>
+                <p>日期: 1月1日 - 12月31日</p>
+                <p>展覽地點: 台北市大安區南京東區34號</p>
+                <p>展覽地址: 台北市大安區南京東區34號</p>
+                <p>畫廊名稱: 安安你好</p>
+              </div>
+            </div>
+          </li> -->
+        </ul>
 
-				<div id="shadow" class="shadow"></div>
+        <div id="shadow" class="shadow"></div>
 
-				<div id="nav-arrows" class="nav-arrows">
-					<a href="#">Next</a>
-					<a href="#">Previous</a>
-				</div>
+        <div id="nav-arrows" class="nav-arrows">
+          <a href="#">Next</a>
+          <a href="#">Previous</a>
+        </div>
 
-				<div id="nav-dots" class="nav-dots">
-					<span class="nav-dot-current"></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div><!-- /wrapper -->
+        <div id="nav-dots" class="nav-dots">
+        </div>
+      </div><!-- /wrapper -->
+      <div class="wrapper">
+        <a id="moreShow" href="#" style="margin-top:20px;float:right">更多</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script id="data" type="application/json" src="http://artsdealer.net/artpp/webapi_site/expo_list"></script>
+    <script type="text/javascript">
+      var data = [{
+        "order": 1,
+        "titleCH": "【存在‧溫度】─ 藝術家聯展",
+        "titleEN": "【Déjà vu】",
+        "galleryName": "現代畫廊",
+        "venueName": "現代畫廊 ( 403台中市西區公益路155巷9號B1 )",
+        "duration": "4月2日  -  4月30日",
+        "venueAddr": "台中市西區公益路155巷9號B1",
+        "imgUrl": "http://artsdealer.net/artpp/images/topic/244/topic_list_14607504261877.jpg",
+        "content": "隨著時間的推移，當今藝術隨著消費時代與時尚社會的趨勢，生活型態與審美觀點的轉變，創作走向越發多元，因著對現今社會、文化交互過程的反照，藝術發展偏向視覺衝擊力度強烈的作品，扁平化風格、動漫美學儼然成為當代藝術的代表性標誌之一。但瞬間獲得的感覺對於藝術發展而言，留住了什麼？又失去了什麼？在接收新的轉變之際，是否有意無意間回望起腦中沖淡的餘溫，若有似無地縈繞記憶裡，偶然回首，悄悄浮上心頭？這些留存的溫度使某些記憶更為深刻，有如陳年老酒一般，愈陳愈香，令人再三回味…此次聯展展出幾位以記憶作為載體的藝術家，放慢著的步調，伴隨思緒與經驗重構的過程，使觀者切身感受藝術家心悟神契、體物察微，記錄眼中看到的世界及當時之心境所幻化的經典作品。\r\n出生於莫斯科的尤利．庫貝(Yuri Kuper)與中國藝術家司徒立，身處不同地域、文化背景，卻彷如英雄所見略同般，以具象手法記錄生活所見所思，呈現出寧靜沉鬱的氣氛。韓舞麟專注於描繪物件的質感，多以單純背景襯托主體的畫面，呈現冷靜清明的效果，不同色彩的光影變化，以及輕薄平滑的色層，讓整體呈現一種清澈俐落的纖巧感受；李加兆描寫模特兒在開工前休憩或是更衣的狀態，呈現自在的人性反應；郭凱軍畫面帶著窺視角度從反映出小人物各色各物，庶民生活中常見的紅藍條紋篷布為象徵表現民工的日常生活，試圖透過與觀者相隔的篷布，呈現生活在城市邊緣人們的種種生態。\r\n藝術家將日常生活寄情於畫布，對人及室內陳設的觀察為創作發想，李惠芳的筆觸簡約而細緻，畫面擁有一股清揚的氣質；連淑蕙從空間、時間進而深入內心世界，在所接觸的事物中不斷的思考與反省，以現實生活為藍本開啟一扇心靈之窗；陳昭宏使用超寫實手法描繪花與女人，像是高倍數特寫鏡頭下的窺視，光線在皮膚上的質感精細而柔和，營造出絕佳動人的氛圍。\r\n看似日常的景象，在藝術家精心構思後再造成更深層次，獨具韻味的新風景，觸動觀者共鳴的心並且沉醉其中，而且停留許久許久…焦慮的困惑得以沈澱，載入的記憶慢慢發酵。在暖陽和煦微風輕撫的季節裡，現代畫廊邀請您放慢腳步，一同感受時光河流停駐保存的記憶與溫度。\r\n文/現代畫廊\r\n____________________________________________\r\n【存在‧溫度】─ 藝術家聯展\r\n◎展期：2016年4月2日－4月30日\r\n◎地點：現代畫廊 ( 403台中市西區公益路155巷9號B1 )\r\n現代畫廊 誠摯地邀請您蒞臨現場參觀"
+      },{
+        "order": 2,
+        "titleCH": "乙皮畫廊＿Young Art Taipei 2016 臺北國際當代藝術博覽會",
+        "titleEN": "Young Art Taipei 2016 ",
+        "galleryName": "乙皮美術",
+        "venueName": "乙皮美術",
+        "duration": "4月23日  -  4月24日",
+        "venueAddr": "台北市台北市忠孝東路一段12號（臺北喜來登飯店 展間932）",
+        "imgUrl": "http://artsdealer.net/artpp/images/topic/243/topic_list_14606563371508.jpg",
+        "content": "Young Art Taipei 2016 臺北國際當代藝術博覽會\r\n地 點: 臺北喜來登飯店 展間932\r\n藏家特別預展: 4月22日（五）下午三點至八點\r\n展 期: 4月23日（六）至4月24日（日）十二點至八點\r\n參 展 藝術家: 吳曉申、阿緹蓉、曾美禎、李祐承、周柏翰、陳芷若、蔡玉庭、韓毓琦"
+      }];
+      var swalHtml = '';
+      for(var i in data){
+        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
+        $('#sb-slider').append(html);
+        if(i == 0){
+          $('#nav-dots').append("<span class='nav-dot-current'></span>");
+        }else{
+          $('#nav-dots').append("<span></span>");
+        }
+      }
+      $(function() {
+        var Page = (function() {
 
-		</div>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
-		<script type="text/javascript">
-			$(function() {
+          var $navArrows = $( '#nav-arrows' ).hide(),
+            $navDots = $( '#nav-dots' ).hide(),
+            $nav = $navDots.children( 'span' ),
+            $shadow = $( '#shadow' ).hide(),
+            slicebox = $( '#sb-slider' ).slicebox( {
+              onReady : function() {
 
-				var Page = (function() {
+                $navArrows.show();
+                $navDots.show();
+                $shadow.show();
 
-					var $navArrows = $( '#nav-arrows' ).hide(),
-						$navDots = $( '#nav-dots' ).hide(),
-						$nav = $navDots.children( 'span' ),
-						$shadow = $( '#shadow' ).hide(),
-						slicebox = $( '#sb-slider' ).slicebox( {
-							onReady : function() {
+              },
+              onBeforeChange : function( pos ) {
 
-								$navArrows.show();
-								$navDots.show();
-								$shadow.show();
+                $nav.removeClass( 'nav-dot-current' );
+                $nav.eq( pos ).addClass( 'nav-dot-current' );
 
-							},
-							onBeforeChange : function( pos ) {
+              }
+            } ),
+            
+            init = function() {
 
-								$nav.removeClass( 'nav-dot-current' );
-								$nav.eq( pos ).addClass( 'nav-dot-current' );
+              initEvents();
+              
+            },
+            initEvents = function() {
 
-							}
-						} ),
-						
-						init = function() {
+              // add navigation events
+              $navArrows.children( ':first' ).on( 'click', function() {
 
-							initEvents();
-							
-						},
-						initEvents = function() {
+                slicebox.next();
+                return false;
 
-							// add navigation events
-							$navArrows.children( ':first' ).on( 'click', function() {
+              } );
 
-								slicebox.next();
-								return false;
+              $navArrows.children( ':last' ).on( 'click', function() {
+                
+                slicebox.previous();
+                return false;
 
-							} );
+              } );
 
-							$navArrows.children( ':last' ).on( 'click', function() {
-								
-								slicebox.previous();
-								return false;
+              $nav.each( function( i ) {
+              
+                $( this ).on( 'click', function( event ) {
+                  
+                  var $dot = $( this );
+                  
+                  if( !slicebox.isActive() ) {
 
-							} );
+                    $nav.removeClass( 'nav-dot-current' );
+                    $dot.addClass( 'nav-dot-current' );
+                  
+                  }
+                  
+                  slicebox.jump( i + 1 );
+                  return false;
+                
+                } );
+                
+              } );
 
-							$nav.each( function( i ) {
-							
-								$( this ).on( 'click', function( event ) {
-									
-									var $dot = $( this );
-									
-									if( !slicebox.isActive() ) {
+            };
 
-										$nav.removeClass( 'nav-dot-current' );
-										$dot.addClass( 'nav-dot-current' );
-									
-									}
-									
-									slicebox.jump( i + 1 );
-									return false;
-								
-								} );
-								
-							} );
+            return { init : init };
 
-						};
+        })();
 
-						return { init : init };
-
-				})();
-
-				Page.init();
-
-			});
-		</script>
-	</body>
-</html>	
+        Page.init();
+        $('#moreShow').on('click',function(e){
+          e.preventDefault();
+          swal({
+            width: 800,
+            title: '展覽一覽',
+            html: '<div><a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a><div class="imfomation"><h4 class="title">test</h4><p>展覽名: 測試</p><p>展覽名: test</p><p>日期: 1月1日 - 12月31日</p><p>展覽地點: 台北市大安區南京東區34號</p><p>展覽地址: 台北市大安區南京東區34號</p><p>畫廊名稱: 安安你好</p></div></div>'
+          });
+        });
+      });
+    </script>
+  </body>
+</html> 
