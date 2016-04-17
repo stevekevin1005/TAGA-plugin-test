@@ -104,73 +104,6 @@
                 <p>畫廊名稱: 安安你好</p>
               </div>
             </div>
-          </li>
-          <li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
-          </li><li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
-          </li><li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
-          </li><li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a>
-              <div class="imfomation">
-                <h4 class="title">test</h4>
-                <p>展覽名: 測試</p>
-                <p>展覽名: test</p>
-                <p>日期: 1月1日 - 12月31日</p>
-                <p>展覽地點: 台北市大安區南京東區34號</p>
-                <p>展覽地址: 台北市大安區南京東區34號</p>
-                <p>畫廊名稱: 安安你好</p>
-              </div>
-            </div>
           </li> -->
         </ul>
 
@@ -213,9 +146,9 @@
         "imgUrl": "http://artsdealer.net/artpp/images/topic/243/topic_list_14606563371508.jpg",
         "content": "Young Art Taipei 2016 臺北國際當代藝術博覽會\r\n地 點: 臺北喜來登飯店 展間932\r\n藏家特別預展: 4月22日（五）下午三點至八點\r\n展 期: 4月23日（六）至4月24日（日）十二點至八點\r\n參 展 藝術家: 吳曉申、阿緹蓉、曾美禎、李祐承、周柏翰、陳芷若、蔡玉庭、韓毓琦"
       }];
-
+      var swalHtml = '';
       for(var i in data){
-        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
+        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
         $('#sb-slider').append(html);
         if(i == 0){
           $('#nav-dots').append("<span class='nav-dot-current'></span>");
@@ -298,12 +231,9 @@
         $('#moreShow').on('click',function(e){
           e.preventDefault();
           swal({
+            width: 800,
             title: '展覽一覽',
-            html: '安安',
-            // showCancelButton: true,
-            // closeOnConfirm: true,
-            // allowEscapeKey: false,
-            // allowOutsideClick: false
+            html: '<div><a ><img class="img" src="http://fakeimg.pl/480x720/" alt="image1"></a><div class="imfomation"><h4 class="title">test</h4><p>展覽名: 測試</p><p>展覽名: test</p><p>日期: 1月1日 - 12月31日</p><p>展覽地點: 台北市大安區南京東區34號</p><p>展覽地址: 台北市大安區南京東區34號</p><p>畫廊名稱: 安安你好</p></div></div>'
           });
         });
       });
