@@ -144,7 +144,7 @@
         "content": "Young Art Taipei 2016 臺北國際當代藝術博覽會\r\n地 點: 臺北喜來登飯店 展間932\r\n藏家特別預展: 4月22日（五）下午三點至八點\r\n展 期: 4月23日（六）至4月24日（日）十二點至八點\r\n參 展 藝術家: 吳曉申、阿緹蓉、曾美禎、李祐承、周柏翰、陳芷若、蔡玉庭、韓毓琦"
       }];
       for(var i in data){
-        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p><p>展覽簡介:<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.substring(0,100).replace(/\r\n/g,"<br />")+". . . . .</p></div></div></li>";
+        var html = "<li><div><a ><img class='img' src='"+data[i].imgUrl+"'></a><div class='imfomation'><h4 class='title'>"+data[i].titleCH+"</h4><p>展覽名(英): "+data[i].titleEN+"</p><p>日期: "+data[i].duration+"</p><p>展覽地點: "+data[i].galleryName+"</p><p>展覽地址:<br />"+data[i].venueAddr+"</p><p>畫廊名稱: "+data[i].galleryName+"</p></div></div></li>";
        
 
         $('#sb-slider').append(html);
