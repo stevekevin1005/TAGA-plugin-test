@@ -139,12 +139,12 @@ var doInit = function(){
         
           $( this ).on( 'click', function( event ) {
             
-            var $dot = $( this );
+            var dot = $( this );
             
             if( !slicebox.isActive() ) {
 
-              $nav.removeClass( 'nav-dot-current' );
-              $dot.addClass( 'nav-dot-current' );
+              nav.removeClass( 'nav-dot-current' );
+              dot.addClass( 'nav-dot-current' );
             
             }
             
