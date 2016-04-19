@@ -1,0 +1,27 @@
+#steve{
+	background:#f4f3f3;
+	width:100vw;
+}
+.showImg{
+	background-size: cover;
+	height:100%;
+}
+.row{
+	margin-top: 10px;
+}
+.information{
+	overflow: scroll;
+	height:100%;
+	background-color: #7a7a7a
+}
+.information >p{
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.5em;
+  margin-top: 10px;
+}
+.showContent{
+	font-size: 15px !important;
+}
