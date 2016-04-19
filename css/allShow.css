@@ -1,5 +1,5 @@
 #steve{
-	background:#f4f3f3;
+	
 	width:100vw;
 }
 .showImg{
@@ -7,6 +7,7 @@
 	height:100%;
 }
 .row{
+	background:#f4f3f3;
 	margin-top: 50px;
 }
 .information{
