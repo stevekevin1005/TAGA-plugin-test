@@ -70,7 +70,7 @@ $.ajax({
     for(var i in data){
       for(var k in gallaryName){
         if(data[i].galleryName == gallaryName[k]){
-          var html = "<div class='row'><div class='col-md-4 showImg' style='background:url("+data[i].imgUrl+");background-size:contain;background-repeat:no-repeat;'></div><div class='col-md-7 information'><p>展覽名稱 :"+data[i].titleCH+"("+data[i].titleEN+")</p><p>展覽日期: "+data[i].duration+"</p><p>畫廊名稱: "+data[i].galleryName +"</p><p>展覽地點: "+data[i].venueName+"</p><p>展覽地址: "+data[i].venueAddr+"</p><p>展覽資訊:</p><p class='showContent'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.replace(/\r\n/g,"<br />")+"</p></div></div>";
+          var html = "<div class='row'><div class='col-md-4 showImg' style='background:url("+data[i].imgUrl+");background-size:contain;background-repeat:no-repeat;'></div><div class='col-md-offset-1 col-md-7 information'><p>展覽名稱 :"+data[i].titleCH+"("+data[i].titleEN+")</p><p>展覽日期: "+data[i].duration+"</p><p>畫廊名稱: "+data[i].galleryName +"</p><p>展覽地點: "+data[i].venueName+"</p><p>展覽地址: "+data[i].venueAddr+"</p><p>展覽資訊:</p><p class='showContent'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+data[i].content.replace(/\r\n/g,"<br />")+"</p></div></div>";
           $('#steve').append(html);
           break;
         }
